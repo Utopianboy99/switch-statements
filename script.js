@@ -1,6 +1,6 @@
-document.getElementById('calculate').addEventListener('click', function (){
-    var list = docunent.getElementById('main-input').value;
-    list = list.replaceAll(' ', ' ');
+document.getElementById('calculate').addEventListener('click', function () {
+    var list = document.getElementById('main-input').value;
+    list = list.replaceAll(' ', '');
     list = list.split(',');
 
     list = list.map((item, index) => {
@@ -17,7 +17,6 @@ document.getElementById('calculate').addEventListener('click', function (){
             }
             document.getElementById('output').innerHTML = sum;
             break;
-
         case 'average':
             var sum = 0;
             for (var i = 0; i < list.length; i++) {
@@ -25,7 +24,6 @@ document.getElementById('calculate').addEventListener('click', function (){
             }
             document.getElementById('output').innerHTML = sum / list.length;
             break;
-
         case 'min':
             var min = list[0];
             for (var i = 0; i < list.length; i++) {
@@ -35,7 +33,6 @@ document.getElementById('calculate').addEventListener('click', function (){
             }
             document.getElementById('output').innerHTML = min;
             break;
-
         case 'max':
             var max = list[0];
             for (var i = 0; i < list.length; i++) {
@@ -44,9 +41,9 @@ document.getElementById('calculate').addEventListener('click', function (){
                 }
             }
             document.getElementById('output').innerHTML = max;
-            break
-
+            break;
         case 'median':
+            // sort list
             for (var i = 0; i < list.length; i++) {
                 for (var j = 0; j < list.length; j++) {
                     if (list[i] < list[j]) {
@@ -65,7 +62,6 @@ document.getElementById('calculate').addEventListener('click', function (){
             }
             document.getElementById('output').innerHTML = median;
             break;
-
         case 'mode':
 
         case 'range':
@@ -81,11 +77,8 @@ document.getElementById('calculate').addEventListener('click', function (){
             }
             document.getElementById('output').innerHTML = max - min;
             break;
-
         default:
             document.getElementById('output').innerHTML = 'Invalid operator';
             break
     }
-});
-
-console.log()
+})
