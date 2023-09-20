@@ -1,4 +1,18 @@
-document.getElementById('calculate').addEventListener('click', function () {
+let calculate = document.getAnimations('calculate');
+
+calculate.addEventListener('click', () =>{
+    console.log("clicked!")
+})
+
+
+ function button() {
+    console.log('mm')
+ }
+
+
+
+  function button() {
+    console.log('mmm')
     var list = document.getElementById('main-input').value;
     list = list.replaceAll(' ', '');
     list = list.split(',');
@@ -79,4 +93,6 @@ document.getElementById('calculate').addEventListener('click', function () {
             document.getElementById('output').innerHTML = 'Invalid operator';
             break
     }
-})
+}
+
+console.log(operator)
