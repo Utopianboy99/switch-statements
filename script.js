@@ -43,7 +43,6 @@ document.getElementById('calculate').addEventListener('click', function () {
             document.getElementById('output').innerHTML = max;
             break;
         case 'median':
-            // sort list
             for (var i = 0; i < list.length; i++) {
                 for (var j = 0; j < list.length; j++) {
                     if (list[i] < list[j]) {
@@ -53,7 +52,6 @@ document.getElementById('calculate').addEventListener('click', function () {
                     }
                 }
             }
-            // get median
             var median = 0;
             if (list.length % 2 == 0) {
                 median = (list[list.length / 2] + list[(list.length / 2) - 1]) / 2;
